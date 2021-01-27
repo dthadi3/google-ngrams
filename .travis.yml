@@ -4,7 +4,7 @@ before_install:
   - sudo apt-get update -y
   - sudo apt-get install -y git python python-setuptools tox
 install:
-  - cd google-ngram-downloader
+  - cd google-ngram
   - python setup.py build
   - python setup.py install
   - tox -e py27-with-doctest
