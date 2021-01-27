@@ -1,0 +1,9 @@
+arch: ppc64le
+language: python
+before_install:
+  - sudo apt-get update -y
+  - sudo apt-get install -y git python python-setuptools tox
+install:
+  - python setup.py build
+  - python setup.py install
+  - tox -e py27-with-doctest
