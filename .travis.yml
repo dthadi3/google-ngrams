@@ -1,10 +1,12 @@
-arch: ppc64le
+arch: 
+  - amd64
+  - ppc64le
 language: python
 before_install:
   - sudo apt-get update -y
   - sudo apt-get install -y git python python-setuptools tox
-install:
-  - cd google-ngram
-  - python setup.py build
-  - python setup.py install
-  - tox -e py27-with-doctest
+#install:
+#  - cd google-ngram
+#  - python setup.py build
+#  - python setup.py install
+#  - tox -e py27-with-doctest
